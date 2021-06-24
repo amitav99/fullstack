@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>selectors</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+    <style>
+      body{
+        font-family: 'Lobster', cursive;
+      }
+      .box {
+        height: 300px;
+        width: 300px;
+        border: 3px solid black;
+        margin: 50px auto;
+        position: relative;
+        background-color: black;
+      }
+      .box::before {
+        content: " ";
+        height: 100%;
+        width: 100%;
+        display: inline-block;
+        border: 3px solid red;
+        position: absolute;
+        top: -10px;
+        left: -10px;
+        z-index: -1;
+      }
+      .box::after {
+        content: " ";
+        height: 100%;
+        width: 100%;
+        display: inline-block;
+        border: 3px solid blue;
+        position: absolute;
+        bottom: -10px;
+        right: -10px;
+        z-index: -1;
+      }
+      a {
+        text-decoration: none;
+        color: black;
+        position: relative;
+      }
+      a:hover::after {
+        content: " ";
+        width: 100%;
+        height: 4px;
+        background-color: #009688;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        transition: 0.5s;
+        z-index: -1;
+      }
+      a:hover::after {
+        height: 14px;
+      }
+      /* 
+         .box:hover {
+          background-color:gray;
+        }
+        .box:not(dontselectme){
+            background-color: brown;
+        }
+        .box :nth-child(4){
+            background-color: yellow;
+            color:black
+        } */
+      ::selection {
+        background-color: green;
+        color: white;
+      }
+      .button {
+        border: 2px solid turquoise;
+        color: solid #000;
+        display: inline-block;
+        background: transparent;
+        cursor: pointer;
+        bottom: 0;
+        border-radius: 25px;
+        transition: all 0.5s;
+        position: relative;
+      }
+      a .button:hover {
+        background-color: teal;
+        position: absolute;
+      }
+      .gradient {
+        height: 400px;
+        width: 100%;
+        background: rgb(2, 0, 36);
+        background: linear-gradient(
+          87deg,
+          rgba(2, 0, 36, 1) 0%,
+          rgba(9, 121, 84, 1) 39%,
+          rgba(0, 212, 255, 1) 100%
+        );
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- <div class="parent">
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box dontselectme"></div>
+      <div class="box">select me</div>
+      <div class="box"></div>
+      <div class="box"></div>
+    </div> */ -->
+    <div class="box"></div>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit earum eos
+    quibusdam magni, est ea dolores neque autem itaque esse, provident sapiente
+    placeat facilis voluptatibus eum possimus, ab amet officia.<a
+      href="helloworld"
+      >INSTAGRAM</a
+    >
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis,
+      consectetur libero eaque hic itaque quae repellat id cumque dolorem
+      laborum voluptas mollitia sapiente. Sapiente praesentium, laborum animi
+      quod mollitia voluptate? Lorem ipsum dolor sit amet consectetur
+      adipisicing elit. Nobis, consectetur libero eaque hic itaque quae repellat
+      id cumque dolorem laborum voluptas mollitia sapiente. Sapiente
+      praesentium, laborum animi quod mollitia voluptate? Lorem ipsum dolor sit
+      amet consectetur adipisicing elit. Nobis, consectetur libero eaque hic
+      itaque quae repellat id cumque dolorem laborum voluptas mollitia sapiente.
+      Sapiente praesentium, laborum animi quod mollitia voluptate?
+    </p>
+    <a href="#" class="button">Click Me</a>
+    <br />
+    <div class="gradient" style="text-align: center; font-size: 100px ; padding-top: 100px">
+      work hard Amitav 
+    </div>
+  </body>
+</html>

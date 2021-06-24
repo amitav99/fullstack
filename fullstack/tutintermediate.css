@@ -1,0 +1,43 @@
+*{
+    margin: 0;
+    padding: 0;
+    ;
+}
+.box3{
+    width: 100%;
+    background-color: azure;
+    border: 2px solid black;
+    padding: 20px;
+    font-size: 75px;
+    border-bottom: 2px solid grey;
+    position:fixed;
+}
+/* .box{
+    border: 5px solid red;
+    height: 200px;
+    width: 200px;
+    box-sizing:border-box;
+    outline-offset: 5px solid black;
+    position: relative;
+    left: 10px;
+    top: 10px;
+}
+.box2{
+    height: 50%;
+    width: 50%;
+    border: 3px solid black;
+    position: absolute;
+    top: 0;
+    right:0;
+    background-color: black ;
+}
+#hey{
+    font-size: x-large;
+    text-shadow: 2px 2px 3px red;
+}
+.box1{
+    border: 3px solid black;
+    display: inline-block;
+    min-width: 600px;
+    max-width: 600px;
+} */
